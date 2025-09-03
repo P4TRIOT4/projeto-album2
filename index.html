@@ -13,7 +13,7 @@
     <!-- cabeçalho -->
 
     <header>
-        <img src="imagens/transferir.png" alt="logo da panela">
+        <img src="imagens/logo/logo.png" alt="logo da panela">
         
         <nav>
             <ul>
@@ -28,6 +28,29 @@
     <main>
         <div class="parte" id="parte1">
             <div class="albuns">
+               <div class="albuns">
+                <div class="carousel">
+                    <div class="slides">
+                    <div class="slide"><img src="imagens/viagem1/1pnl.jpg" alt=""></div>
+                    <div class="slide"><img src="imagens/viagem1/IMG_6137.png" alt=""></div>
+                    <div class="slide"><video src="imagens/viagem1/0d771366e3814352bd455ba659a08c17.mov" controls></video></div>
+                    <div class="slide"><video src="imagens/viagem1/644a348f-588e-4b4a-b9aa-28bb190c9b76.mov" controls></video></div>
+                    <div class="slide"><video src="imagens/viagem1/688e7dfe-c469-4f41-8aeb-8dad47336a40.mov" controls></video></div>
+                    <div class="slide"><video src="imagens/viagem1/IMG_6154.mov" controls></video></div>
+                    <div class="slide"><img src="imagens/viagem1/926A703A-4F1E-4212-B605-96CED27D5A57.jpg" alt=""></div>
+                    <div class="slide"><video src="imagens/viagem1/6.mov" controls></video></div>
+                    <div class="slide"><img src="imagens/viagem1/4.jpg" alt=""></div>
+                    <div class="slide"><video src="imagens/viagem1/7.mov" controls></video></div>
+                    <div class="slide"><img src="imagens/viagem1/5.jpg" alt=""></div>
+                     <div class="slide"><video src="imagens/viagem1/8.mov" controls></video></div>
+                    </div>
+                    <div class="controls">
+                    <button class="prev">‹</button>
+                    <button class="next">›</button>
+                    </div>
+                    <div class="dots"></div>
+                </div>
+                </div>
 
             </div>
 
@@ -91,5 +114,40 @@
          <a href="">erick</a> <a href="">ayki</a> <a    href="">emanuel</a></p>  
     </footer>
     
+
+
+    <script>
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const slides = carousel.querySelector('.slides');
+    const slideCount = carousel.querySelectorAll('.slide').length;
+    const dotsContainer = carousel.querySelector('.dots');
+    let current = 0;
+
+    // cria bolinhas
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+    const dots = carousel.querySelectorAll('.dot');
+
+    function goToSlide(index) {
+      current = (index + slideCount) % slideCount;
+      slides.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach(d => d.classList.remove('active'));
+      dots[current].classList.add('active');
+      // pausa vídeos fora do slide
+      carousel.querySelectorAll('video').forEach(v => v.pause());
+      const activeVideo = slides.children[current].querySelector('video');
+      if (activeVideo) activeVideo.play();
+    }
+
+    carousel.querySelector('.next').onclick = () => goToSlide(current + 1);
+    carousel.querySelector('.prev').onclick = () => goToSlide(current - 1);
+  });
+</script>
+
 </body>
 </html>
