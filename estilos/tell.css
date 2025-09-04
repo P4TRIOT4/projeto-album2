@@ -110,7 +110,7 @@
 
   /* Texto e lista centralizados */
   pre {
-    margin: 0;
+    margin-left: -79px;
     font-size: 1em;
     text-align: center;
   }
