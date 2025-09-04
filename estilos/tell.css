@@ -51,34 +51,22 @@
     box-sizing: border-box;
   }
 
-  /* Albuns e infos centralizados */
-  /* Ajustes no mobile */
-.albuns, .carousel {
-  width: 100%;
-  max-width: 400px;
-  height: auto;          /* altura automática */
-  box-sizing: border-box;
-}
+  /* Albuns e carousel */
+  .albuns, .carousel {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    box-sizing: border-box;
+  }
 
-.slide {
-  width: 100%;
-  height: auto;          /* segue a altura do conteúdo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide img,
-.slide video {
-  width: 100%;
-  height: auto;          /* mantém proporção */
-  max-height: 500px;
-  object-fit: contain;
-  border-radius: 6px;
-  background: #000;
-  display: block;        /* remove espaçamento extra */
-}
-
+  /* Slides arrastáveis */
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+  }
 
   .slides::-webkit-scrollbar {
     display: none;
@@ -93,7 +81,6 @@
     height: auto;
   }
 
-  /* Imagens e vídeos */
   .slide img,
   .slide video,
   .albuns img {
@@ -103,18 +90,17 @@
     object-fit: contain;
     border-radius: 6px;
     background: #000;
+    display: block;
   }
 
-  
-
-  /* Infos */
+  /* Infos centralizado */
   .infos {
+    width: 100%;
+    max-width: 400px;
     padding: 15px;
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 50px auto;
+    box-sizing: border-box;
   }
 
   .infos iframe {
@@ -124,7 +110,7 @@
 
   /* Texto e lista centralizados */
   pre {
-    margin-left: -79px;
+    margin: 0;
     font-size: 1em;
     text-align: center;
   }
