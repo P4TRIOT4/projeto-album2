@@ -9,6 +9,11 @@
     box-sizing: border-box;
   }
 
+  hr{
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+
   /* Header centralizado */
   header {
     flex-direction: column;

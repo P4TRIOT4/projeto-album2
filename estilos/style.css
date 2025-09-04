@@ -28,6 +28,11 @@ a{
     color: #F27405;
 }
 
+hr{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
 header{
     background-color: #012E40;
     color: #F27405;
@@ -55,8 +60,6 @@ nav li{
 
 main{
     width: 90vw;
-    margin-top: 50px;
-    margin-bottom: 50px;
     margin: 50px 100px 50px 50px;
 
     display: flex;
@@ -64,8 +67,6 @@ main{
 }
 
 .parte{
-    margin-bottom: 150px;
-
     display: flex;
     flex-flow: row wrap;
     align-items: center;
