@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/tell.css">
 
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dehaze" />
+
 </head>
 <body>
 
@@ -17,10 +20,21 @@
         <img src="imagens/logo/logo.png" alt="logo da panela">
         
         <nav>
-            <ul>
-                <li><a href="#parte1">VIAGEM 1.0</a></li>
-                <li><a href="#parte2">VIAGEM 2.0</a></li>
-            </ul>
+
+          <div id="hamburguer">
+            <label for="hb" id="hb1">
+              <span class="material-symbols-outlined">
+              dehaze
+              </span>
+            </label>
+                  <input type="checkbox" id="hb" hidden>
+                  <section class="hamburguer1">
+                     <ul>
+                  <li><a href="#parte1">V1</a></li>
+                  <li><a href="#parte2">V2</a></li>
+                     </ul>
+                  </section>
+          </div>
         </nav>
     </header>
 
@@ -59,6 +73,7 @@
                     <button class="next">›</button>
                     </div>
                     <div class="dots"></div>
+
                 </div>
                 </div>
 
@@ -80,9 +95,8 @@
            Sheik    Guerrinha
            Kadu     Andre
    </pre>
-    
-            
                 </section>
+
              </div>
         </div>
 
