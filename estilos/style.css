@@ -3,6 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
 
 *{
     margin: 0px;
@@ -38,46 +41,97 @@ hr{
 header{
     background-image: linear-gradient(to bottom, #244768, #012E40);
     color: #F27405;
+    height: 100px;
 
-    display: flex;
-    flex-flow: row nowrap;
-}
+    display: grid;
+    grid-template-columns: auto 1fr 4fr 2fr auto; }
+    
 
 header img{
-    width: 160px;
+  grid-column: 2 / 3;
+    width: 100px;
 }
 
 nav{
+  grid-column: 4 / 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
-   margin: auto 20px auto 1150px;
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
+nav ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
 
 nav li{
     padding: 5px;
-    font-family: "Modak", Arial, Helvetica, sans-serif;
+    font-family: "Indie Flower", Arial, Helvetica, sans-serif;
     font-size: 2em;
 }
 
+#btn-menu{
+  margin-top: 4px;
+  margin-right: 5px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#hamburguer {
+  position: relative;
+  margin-bottom: 6px;
+}
+
 .hamburguer1 {
-  display: none; 
+  position: absolute;
+  left: -100px;  
+  top: -16px; 
+  padding: 10px 15px;
+  border-radius: 5px;
+
+  display: none;       
+  white-space: nowrap; 
 }
 
-#hb:checked ~ .hamburguer1 {
-  display: block; 
+.hamburguer1.open {
+  display: block;      
 }
 
-label span.material-symbols-outlined {
-  color: var(--cor3); 
-  background-color: none;
+#sobre1{
+  font-size: 1.2em;
+  font-weight: bolder;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#hb1{
-  background-color: rgba(0, 0, 255, 0);
+#sobre-aba {
+  position: fixed;
+  top: -300px;
+  left: 0;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 25px 20px;
+  line-height: 1.6;
+  font-size: 16px;
+  transition: top 0.4s ease;
+  z-index: 9999999; /* garante que nada fica por cima */
 }
+
+#sobre-aba.open {
+  top: 0;
+}
+
+#btn-sobre {
+  cursor: pointer;
+}
+
+
+
 
 
 main{
