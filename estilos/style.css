@@ -130,9 +130,9 @@ nav li{
   cursor: pointer;
 }
 
-
-
-
+#contato{
+  margin-left: 5px;
+}
 
 main{
     width: 90vw;

@@ -55,6 +55,15 @@
   left: -100px;  
   top: -10px; }
 
+  #sobre1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contato{
+    margin-left: 22px;
+  }
+
   .parte {
     display: flex;
     flex-direction: column; 
