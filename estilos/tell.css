@@ -48,6 +48,9 @@
 
   #hamburguer{
     display: block;
+
+    position: relative;
+    left: 20px;
   }
 
   .hamburguer1 {
