@@ -70,7 +70,7 @@
   }
 
   .corpao{
-    width: 420px;
+    width: 320px;
     height: auto;
     
     margin: auto;
@@ -81,7 +81,7 @@
 
   h1{
     display: block;
-    width: 400px;
+    width: 300px;
     margin: auto;
     padding: 3px;
     text-align: center;
@@ -106,6 +106,10 @@
     max-width: 400px;
     height: auto;
     box-sizing: border-box;
+  }
+
+  .albuns{
+    border:2px solid #C1D9D4;
   }
 
   .slides {
@@ -150,7 +154,8 @@
 }
 
 .btn-mais{
-   width: 400px;
+    width: 300px;
+    height: 2.5em;
     margin: -19px auto 2px auto;
     padding: 3px;
     text-align: center;
