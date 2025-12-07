@@ -22,10 +22,10 @@
 
   header img {
     grid-column: 2 / 3;
-    width: 100px;
+    width: 6em;
     margin-bottom: 10px;
 
-   transform: translateY(-10px);
+   transform: translateY(-5px);
   }
 
   nav {
