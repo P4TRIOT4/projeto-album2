@@ -187,11 +187,7 @@
     text-align: center;
   }
 
-  .infos p,
-  label,
-  pre {
-    font-size: 14px;
-  }
+  
 
   /* esconder setas no mobile */
 .controls {
@@ -228,6 +224,12 @@ footer {
 @media (max-width: 480px) {
   header img {
     width: 80px;
+  }
+
+  .infos p,
+  label,
+  pre {
+    font-size: 14px;
   }
 }
 
