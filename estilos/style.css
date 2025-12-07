@@ -164,6 +164,10 @@ h1{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.574);
 }
 
+.btn-mais{
+  display: none;
+}
+
 .infos{
     background-color: #012E40;
     height: 310px;
